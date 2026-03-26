@@ -1,0 +1,35 @@
+
+Call:
+glm(formula = category ~ SBP + DBP + Hb + WBC + Platelet + BUN + 
+    Creatinine + HCO3 + ph + HbA1c + LDL + HDL + TG + Tsat + 
+    Ferritin, family = "binomial", data = table_reduction, subset = train)
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)  
+(Intercept) -6.7434228  4.8315642  -1.396   0.1628  
+SBP          0.0160727  0.0219491   0.732   0.4640  
+DBP         -0.0351994  0.0276706  -1.272   0.2033  
+Hb           0.4487882  0.2670623   1.680   0.0929 .
+WBC          0.4160635  0.2268422   1.834   0.0666 .
+Platelet    -0.0112543  0.0068289  -1.648   0.0993 .
+BUN          0.0491418  0.0297801   1.650   0.0989 .
+Creatinine  -0.1827526  0.2461699  -0.742   0.4579  
+HCO3        -0.0019997  0.1064969  -0.019   0.9850  
+ph          -0.0725134  0.2721918  -0.266   0.7899  
+HbA1c       -0.0875759  0.1244108  -0.704   0.4815  
+LDL         -0.0010834  0.0121344  -0.089   0.9289  
+HDL         -0.0047101  0.0312647  -0.151   0.8803  
+TG           0.0023753  0.0273828   0.087   0.9309  
+Tsat         6.0594855  3.5080299   1.727   0.0841 .
+Ferritin     0.0005004  0.0010224   0.489   0.6245  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 59.401  on 42  degrees of freedom
+Residual deviance: 46.633  on 27  degrees of freedom
+AIC: 78.633
+
+Number of Fisher Scoring iterations: 4
+
