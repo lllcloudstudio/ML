@@ -1,12 +1,13 @@
 # ML
 
-A review or evaluation of 2017 health data from Dr. Vijay Kolachalama:
+A review or evaluation of 2017 health data from Dr. Vijay Kolachalama. Data's either synthetic or not.
 
-50 patient blood sample data either synthetic or not
+50 patient blood sample 
 13 diagnostic variables, as numerics and without annotations 
 Age, Gender, or Race variables are numerical 
 
-Variables like ph or hb, I consider an extrapolation to modelling
+Variables like ph or hb, I consider an extrapolation to modelling, as diagnostics (health status)
+and two group (Male of Female) health bias.
 
 Review:
 1) Summary comparison of 2 models (glm() function). As response either `category` or `Gender`
