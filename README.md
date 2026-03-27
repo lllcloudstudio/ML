@@ -21,5 +21,5 @@ the principal component loading vectors have length p=16`
 Summary per component: Standard deviation, Proportion of Variance, or Cumulative Proportion
 multiplot line or bar graph of vectors
 
-4) model evaluation: training and test set selection # 10-40 
+4) model evaluation: training and test set selection # 10-40 ; 15-35
  
