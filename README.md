@@ -22,4 +22,8 @@ Summary per component: Standard deviation, Proportion of Variance, or Cumulative
 multiplot line or bar graph of vectors
 
 4) model evaluation: training and test set selection # 10-40 ; 15-35
- 
+
+
+#Small Datasets: If you have very few instances (e.g., < 300), 20% may be too small to reliably test on. In this scenario, k-fold cross-validation is preferred.
+
+#Use a sample size calculator and argue that you need 74.24, 25.76 split due to wanting a 90%/95% confidence etc.
