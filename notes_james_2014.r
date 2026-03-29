@@ -74,7 +74,13 @@ round()
 class() # or 
 is.character()
 as.character()
-
+mean()
+var()
+sqrt()
+sd()
+seq()
+rnorm() #mean 0 sd 1
+pairs() #
 ##### Stock market data
 
 > dim(Smarket)
