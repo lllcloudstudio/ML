@@ -230,3 +230,58 @@ hc.single=hclust(dist(table[,c(7,14)]),method="single")
 > #names(kmodel)
 [1] "cluster"      "centers"      "totss"        "withinss"     "tot.withinss"
 [6] "betweenss"    "size"         "iter"         "ifault"      
+
+
+
+-----------------------------
+
+library(boot)
+
+# Recursive function to drop variables and assess via CV
+recursive_cv_assessment <- function(data, response, predictors) {
+  # 1. Define model formula
+  formula_str <- paste(response, "~", paste(predictors, collapse = " + "))
+  model_form <- as.formula(formula_str)
+  
+  # 2. Fit model and perform 10-fold CV
+  model <- glm(model_form, data = data)
+  cv_res <- cv.glm(data, model, K = 10)
+  cv_error <- cv_res$delta[1]
+  
+  cat("Formula:", formula_str, "| CV Error:", round(cv_error, 4), "\n", file="/Users/Guest/Desktop/Github/ML/summary/2/out.file",append=TRUE)
+  
+
+
+  # 3. Base case: if only one predictor left, stop
+  if (length(predictors) == 1) {
+    return(NULL)
+  }
+  
+  # 4. Recursive Step: Remove one predictor and recurse
+  for (i in 1:length(predictors)) {
+    new_predictors <- predictors[-i]
+    # For demonstration, only recurse by dropping the last added, 
+    # otherwise, this becomes combinatorial.
+  }
+  # Simple recursion example: Drop the last predictor in the list
+  recursive_cv_assessment(data, response, predictors[-length(predictors)])
+}
+
+# --- Example Usage ---
+# Use mtcars dataset, predicting mpg
+data(mtcars)
+# Initial variables
+vars <- c("wt", "hp", "disp")
+
+# Run recursive function
+recursive_cv_assessment(mtcars, "mpg", vars)
+
+
+
+
+
+
+
+
+
+
