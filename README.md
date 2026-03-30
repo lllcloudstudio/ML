@@ -24,7 +24,7 @@ Summary per component: Standard deviation, Proportion of Variance, or Cumulative
 multiplot line or bar graph of vectors
 
 4) model evaluation: training and test set selection (10-40 ; 15-35)
-   LOOCV or k-fold cross validation 
+   LOOCV* or k-fold cross validation* 
 
 
 
