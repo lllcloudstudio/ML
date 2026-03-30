@@ -239,14 +239,14 @@ hc.single=hclust(dist(table[,c(7,14)]),method="single")
 library(boot)
 
 # Recursive function to drop variables and assess via CV
-recursive_cv_assessment <- function(data, response, predictors,k) {  # or no k
+recursive_cv_assessment <- function(data, response, predictors) {  # or no k
   # 1. Define model formula
   formula_str <- paste(response, "~", paste(predictors, collapse = " + "))
   model_form <- as.formula(formula_str)
   
   # 2. Fit model and perform 10-fold CV
   model <- glm(model_form, data = data)
-  cv_res <- cv.glm(data, model, K = k) # 10
+  cv_res <- cv.glm(data, model) # 10
   cv_error <- cv_res$delta[1]
 
 
@@ -266,7 +266,7 @@ recursive_cv_assessment <- function(data, response, predictors,k) {  # or no k
     # otherwise, this becomes combinatorial.
   }
   # Simple recursion example: Drop the last predictor in the list
-  recursive_cv_assessment(data, response, predictors[-length(predictors)],k)
+  recursive_cv_assessment(data, response, predictors[-length(predictors)])
 }
 
 # --- Example Usage ---
