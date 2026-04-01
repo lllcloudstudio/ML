@@ -9,8 +9,9 @@ recursive_cv_assessment <- function(data, response, predictors) {
   model <- glm(model_form, data = data)
   cv_res <- cv.glm(data, model, K = 10)
   cv_error <- cv_res$delta[1]
+  cv_K <- cv_res$K
   
-  cat("Formula:", formula_str, "| CV Error:", round(cv_error, 4), "\n", file="/Users/Guest/Desktop/Github/ML/summary/2/out.file",append=TRUE)
+  cat(formula_str, ",", round(cv_error, 4), ",", cv_K,"\n", file="/Users/Guest/Desktop/Github/ML/summary/2/out.file",append=TRUE)
   
 
 
