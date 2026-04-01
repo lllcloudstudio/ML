@@ -1,0 +1,210 @@
+Formula: ph ~ SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat + Ferritin | CV Error: 125.6965 
+Formula: ph ~ SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat | CV Error: 223.7112 
+Formula: ph ~ SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG | CV Error: 171.5623 
+Formula: ph ~ SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL | CV Error: 137.4282 
+Formula: ph ~ SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL | CV Error: 251.619 
+Formula: ph ~ SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c | CV Error: 147.8652 
+Formula: ph ~ SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 | CV Error: 407.1619 
+Formula: ph ~ SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine | CV Error: 722.4358 
+Formula: ph ~ SBP + DBP + Hb + WBC + Platelet + BUN | CV Error: 1196.719 
+Formula: ph ~ SBP + DBP + Hb + WBC + Platelet | CV Error: 2285.797 
+Formula: ph ~ SBP + DBP + Hb + WBC | CV Error: 348.6295 
+Formula: ph ~ SBP + DBP + Hb | CV Error: 11.9127 
+Formula: ph ~ SBP + DBP | CV Error: 12.0252 
+Formula: ph ~ SBP | CV Error: 11.1955 
+Formula: SBP ~ ph + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat + Ferritin | CV Error: 35638.5 
+Formula: SBP ~ ph + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat | CV Error: 42577.15 
+Formula: SBP ~ ph + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG | CV Error: 13927.16 
+Formula: SBP ~ ph + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL | CV Error: 9640.273 
+Formula: SBP ~ ph + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL | CV Error: 64329.24 
+Formula: SBP ~ ph + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c | CV Error: 58663.44 
+Formula: SBP ~ ph + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 | CV Error: 99131.49 
+Formula: SBP ~ ph + DBP + Hb + WBC + Platelet + BUN + Creatinine | CV Error: 115051.4 
+Formula: SBP ~ ph + DBP + Hb + WBC + Platelet + BUN | CV Error: 127228.6 
+Formula: SBP ~ ph + DBP + Hb + WBC + Platelet | CV Error: 196196.4 
+Formula: SBP ~ ph + DBP + Hb + WBC | CV Error: 16867.3 
+Formula: SBP ~ ph + DBP + Hb | CV Error: 1108.559 
+Formula: SBP ~ ph + DBP | CV Error: 979.9269 
+Formula: SBP ~ ph | CV Error: 2554.284 
+Formula: DBP ~ ph + SBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat + Ferritin | CV Error: 33179.44 
+Formula: DBP ~ ph + SBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat | CV Error: 13703.38 
+Formula: DBP ~ ph + SBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG | CV Error: 44100.15 
+Formula: DBP ~ ph + SBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL | CV Error: 4851.614 
+Formula: DBP ~ ph + SBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL | CV Error: 82078.69 
+Formula: DBP ~ ph + SBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c | CV Error: 45249.05 
+Formula: DBP ~ ph + SBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 | CV Error: 83555.66 
+Formula: DBP ~ ph + SBP + Hb + WBC + Platelet + BUN + Creatinine | CV Error: 100539.9 
+Formula: DBP ~ ph + SBP + Hb + WBC + Platelet + BUN | CV Error: 95746.62 
+Formula: DBP ~ ph + SBP + Hb + WBC + Platelet | CV Error: 79182.32 
+Formula: DBP ~ ph + SBP + Hb + WBC | CV Error: 31370.51 
+Formula: DBP ~ ph + SBP + Hb | CV Error: 323.8618 
+Formula: DBP ~ ph + SBP | CV Error: 318.7759 
+Formula: DBP ~ ph | CV Error: 996.4437 
+Formula: Hb ~ ph + SBP + DBP + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat + Ferritin | CV Error: 155.2203 
+Formula: Hb ~ ph + SBP + DBP + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat | CV Error: 139.3454 
+Formula: Hb ~ ph + SBP + DBP + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG | CV Error: 103.8988 
+Formula: Hb ~ ph + SBP + DBP + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL | CV Error: 134.7539 
+Formula: Hb ~ ph + SBP + DBP + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL | CV Error: 124.4914 
+Formula: Hb ~ ph + SBP + DBP + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c | CV Error: 127.7677 
+Formula: Hb ~ ph + SBP + DBP + WBC + Platelet + BUN + Creatinine + HCO3 | CV Error: 65.5744 
+Formula: Hb ~ ph + SBP + DBP + WBC + Platelet + BUN + Creatinine | CV Error: 53.9067 
+Formula: Hb ~ ph + SBP + DBP + WBC + Platelet + BUN | CV Error: 138.4352 
+Formula: Hb ~ ph + SBP + DBP + WBC + Platelet | CV Error: 78.1427 
+Formula: Hb ~ ph + SBP + DBP + WBC | CV Error: 11.2508 
+Formula: Hb ~ ph + SBP + DBP | CV Error: 2.5441 
+Formula: Hb ~ ph + SBP | CV Error: 2.5228 
+Formula: Hb ~ ph | CV Error: 2.5137 
+Formula: WBC ~ ph + SBP + DBP + Hb + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat + Ferritin | CV Error: 11894.26 
+Formula: WBC ~ ph + SBP + DBP + Hb + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat | CV Error: 10687.25 
+Formula: WBC ~ ph + SBP + DBP + Hb + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG | CV Error: 11495.93 
+Formula: WBC ~ ph + SBP + DBP + Hb + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL | CV Error: 9306.228 
+Formula: WBC ~ ph + SBP + DBP + Hb + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL | CV Error: 10494.5 
+Formula: WBC ~ ph + SBP + DBP + Hb + Platelet + BUN + Creatinine + HCO3 + HbA1c | CV Error: 9224.073 
+Formula: WBC ~ ph + SBP + DBP + Hb + Platelet + BUN + Creatinine + HCO3 | CV Error: 9273.146 
+Formula: WBC ~ ph + SBP + DBP + Hb + Platelet + BUN + Creatinine | CV Error: 8625.774 
+Formula: WBC ~ ph + SBP + DBP + Hb + Platelet + BUN | CV Error: 8402.163 
+Formula: WBC ~ ph + SBP + DBP + Hb + Platelet | CV Error: 8230.134 
+Formula: WBC ~ ph + SBP + DBP + Hb | CV Error: 7893.201 
+Formula: WBC ~ ph + SBP + DBP | CV Error: 7878.227 
+Formula: WBC ~ ph + SBP | CV Error: 8037.344 
+Formula: WBC ~ ph | CV Error: 7736.368 
+Formula: Platelet ~ ph + SBP + DBP + Hb + WBC + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat + Ferritin | CV Error: 1868315 
+Formula: Platelet ~ ph + SBP + DBP + Hb + WBC + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat | CV Error: 1934799 
+Formula: Platelet ~ ph + SBP + DBP + Hb + WBC + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG | CV Error: 2668230 
+Formula: Platelet ~ ph + SBP + DBP + Hb + WBC + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL | CV Error: 2363290 
+Formula: Platelet ~ ph + SBP + DBP + Hb + WBC + BUN + Creatinine + HCO3 + HbA1c + LDL | CV Error: 2052188 
+Formula: Platelet ~ ph + SBP + DBP + Hb + WBC + BUN + Creatinine + HCO3 + HbA1c | CV Error: 2137350 
+Formula: Platelet ~ ph + SBP + DBP + Hb + WBC + BUN + Creatinine + HCO3 | CV Error: 1996065 
+Formula: Platelet ~ ph + SBP + DBP + Hb + WBC + BUN + Creatinine | CV Error: 1646747 
+Formula: Platelet ~ ph + SBP + DBP + Hb + WBC + BUN | CV Error: 1386277 
+Formula: Platelet ~ ph + SBP + DBP + Hb + WBC | CV Error: 2133440 
+Formula: Platelet ~ ph + SBP + DBP + Hb | CV Error: 7341.847 
+Formula: Platelet ~ ph + SBP + DBP | CV Error: 7380.689 
+Formula: Platelet ~ ph + SBP | CV Error: 7302.386 
+Formula: Platelet ~ ph | CV Error: 7884.849 
+Formula: BUN ~ ph + SBP + DBP + Hb + WBC + Platelet + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat + Ferritin | CV Error: 2374.002 
+Formula: BUN ~ ph + SBP + DBP + Hb + WBC + Platelet + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat | CV Error: 1063.064 
+Formula: BUN ~ ph + SBP + DBP + Hb + WBC + Platelet + Creatinine + HCO3 + HbA1c + LDL + HDL + TG | CV Error: 13958.13 
+Formula: BUN ~ ph + SBP + DBP + Hb + WBC + Platelet + Creatinine + HCO3 + HbA1c + LDL + HDL | CV Error: 1001.364 
+Formula: BUN ~ ph + SBP + DBP + Hb + WBC + Platelet + Creatinine + HCO3 + HbA1c + LDL | CV Error: 426.2367 
+Formula: BUN ~ ph + SBP + DBP + Hb + WBC + Platelet + Creatinine + HCO3 + HbA1c | CV Error: 428.928 
+Formula: BUN ~ ph + SBP + DBP + Hb + WBC + Platelet + Creatinine + HCO3 | CV Error: 1027.374 
+Formula: BUN ~ ph + SBP + DBP + Hb + WBC + Platelet + Creatinine | CV Error: 878.2117 
+Formula: BUN ~ ph + SBP + DBP + Hb + WBC + Platelet | CV Error: 14657.8 
+Formula: BUN ~ ph + SBP + DBP + Hb + WBC | CV Error: 9811.809 
+Formula: BUN ~ ph + SBP + DBP + Hb | CV Error: 477.1769 
+Formula: BUN ~ ph + SBP + DBP | CV Error: 468.2684 
+Formula: BUN ~ ph + SBP | CV Error: 501.872 
+Formula: BUN ~ ph | CV Error: 485.5219 
+Formula: Creatinine ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + HCO3 + HbA1c + LDL + HDL + TG + Tsat + Ferritin | CV Error: 30.7899 
+Formula: Creatinine ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + HCO3 + HbA1c + LDL + HDL + TG + Tsat | CV Error: 4.8718 
+Formula: Creatinine ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + HCO3 + HbA1c + LDL + HDL + TG | CV Error: 8.8794 
+Formula: Creatinine ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + HCO3 + HbA1c + LDL + HDL | CV Error: 66.5964 
+Formula: Creatinine ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + HCO3 + HbA1c + LDL | CV Error: 14.8925 
+Formula: Creatinine ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + HCO3 + HbA1c | CV Error: 17.6849 
+Formula: Creatinine ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + HCO3 | CV Error: 6.1167 
+Formula: Creatinine ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN | CV Error: 23.635 
+Formula: Creatinine ~ ph + SBP + DBP + Hb + WBC + Platelet | CV Error: 27.4202 
+Formula: Creatinine ~ ph + SBP + DBP + Hb + WBC | CV Error: 5.6536 
+Formula: Creatinine ~ ph + SBP + DBP + Hb | CV Error: 5.1482 
+Formula: Creatinine ~ ph + SBP + DBP | CV Error: 4.872 
+Formula: Creatinine ~ ph + SBP | CV Error: 4.3775 
+Formula: Creatinine ~ ph | CV Error: 4.547 
+Formula: HCO3 ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HbA1c + LDL + HDL + TG + Tsat + Ferritin | CV Error: 1755.039 
+Formula: HCO3 ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HbA1c + LDL + HDL + TG + Tsat | CV Error: 594.2215 
+Formula: HCO3 ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HbA1c + LDL + HDL + TG | CV Error: 1400.092 
+Formula: HCO3 ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HbA1c + LDL + HDL | CV Error: 1769.98 
+Formula: HCO3 ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HbA1c + LDL | CV Error: 1634.787 
+Formula: HCO3 ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HbA1c | CV Error: 746.1911 
+Formula: HCO3 ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine | CV Error: 930.0972 
+Formula: HCO3 ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN | CV Error: 873.8887 
+Formula: HCO3 ~ ph + SBP + DBP + Hb + WBC + Platelet | CV Error: 623.4422 
+Formula: HCO3 ~ ph + SBP + DBP + Hb + WBC | CV Error: 1301.186 
+Formula: HCO3 ~ ph + SBP + DBP + Hb | CV Error: 50.0797 
+Formula: HCO3 ~ ph + SBP + DBP | CV Error: 42.0851 
+Formula: HCO3 ~ ph + SBP | CV Error: 42.3015 
+Formula: HCO3 ~ ph | CV Error: 40.0728 
+Formula: HbA1c ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + LDL + HDL + TG + Tsat + Ferritin | CV Error: 23.4158 
+Formula: HbA1c ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + LDL + HDL + TG + Tsat | CV Error: 307.507 
+Formula: HbA1c ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + LDL + HDL + TG | CV Error: 211.0046 
+Formula: HbA1c ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + LDL + HDL | CV Error: 439.1624 
+Formula: HbA1c ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + LDL | CV Error: 323.8399 
+Formula: HbA1c ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 | CV Error: 50.4185 
+Formula: HbA1c ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine | CV Error: 115.7348 
+Formula: HbA1c ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN | CV Error: 16.2347 
+Formula: HbA1c ~ ph + SBP + DBP + Hb + WBC + Platelet | CV Error: 23.6766 
+Formula: HbA1c ~ ph + SBP + DBP + Hb + WBC | CV Error: 57.4389 
+Formula: HbA1c ~ ph + SBP + DBP + Hb | CV Error: 15.5502 
+Formula: HbA1c ~ ph + SBP + DBP | CV Error: 15.9622 
+Formula: HbA1c ~ ph + SBP | CV Error: 15.6181 
+Formula: HbA1c ~ ph | CV Error: 15.4375 
+Formula: LDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + HDL + TG + Tsat + Ferritin | CV Error: 212211.7 
+Formula: LDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + HDL + TG + Tsat | CV Error: 179628.4 
+Formula: LDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + HDL + TG | CV Error: 205539.7 
+Formula: LDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + HDL | CV Error: 176095.3 
+Formula: LDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c | CV Error: 226666.3 
+Formula: LDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 | CV Error: 217790.7 
+Formula: LDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine | CV Error: 331267.1 
+Formula: LDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN | CV Error: 101811.3 
+Formula: LDL ~ ph + SBP + DBP + Hb + WBC + Platelet | CV Error: 258139.2 
+Formula: LDL ~ ph + SBP + DBP + Hb + WBC | CV Error: 15328.01 
+Formula: LDL ~ ph + SBP + DBP + Hb | CV Error: 6733.973 
+Formula: LDL ~ ph + SBP + DBP | CV Error: 5741.434 
+Formula: LDL ~ ph + SBP | CV Error: 4939.195 
+Formula: LDL ~ ph | CV Error: 4688.653 
+Formula: HDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + TG + Tsat + Ferritin | CV Error: 11078.73 
+Formula: HDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + TG + Tsat | CV Error: 11688.32 
+Formula: HDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + TG | CV Error: 18422.73 
+Formula: HDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL | CV Error: 20486.19 
+Formula: HDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c | CV Error: 1904.239 
+Formula: HDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 | CV Error: 1392.851 
+Formula: HDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine | CV Error: 4137.44 
+Formula: HDL ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN | CV Error: 1156.761 
+Formula: HDL ~ ph + SBP + DBP + Hb + WBC + Platelet | CV Error: 5289.755 
+Formula: HDL ~ ph + SBP + DBP + Hb + WBC | CV Error: 13360.13 
+Formula: HDL ~ ph + SBP + DBP + Hb | CV Error: 854.0192 
+Formula: HDL ~ ph + SBP + DBP | CV Error: 776.8712 
+Formula: HDL ~ ph + SBP | CV Error: 698.1504 
+Formula: HDL ~ ph | CV Error: 702.5782 
+Formula: TG ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + Tsat + Ferritin | CV Error: 17012.6 
+Formula: TG ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + Tsat | CV Error: 28317.73 
+Formula: TG ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL | CV Error: 4745.271 
+Formula: TG ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL | CV Error: 669.5095 
+Formula: TG ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c | CV Error: 931.2091 
+Formula: TG ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 | CV Error: 1653.862 
+Formula: TG ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine | CV Error: 7282.907 
+Formula: TG ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN | CV Error: 7245.934 
+Formula: TG ~ ph + SBP + DBP + Hb + WBC + Platelet | CV Error: 4590.161 
+Formula: TG ~ ph + SBP + DBP + Hb + WBC | CV Error: 3966.728 
+Formula: TG ~ ph + SBP + DBP + Hb | CV Error: 1111.671 
+Formula: TG ~ ph + SBP + DBP | CV Error: 1009.319 
+Formula: TG ~ ph + SBP | CV Error: 964.2524 
+Formula: TG ~ ph | CV Error: 949.5402 
+Formula: Tsat ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Ferritin | CV Error: 0.0493 
+Formula: Tsat ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG | CV Error: 0.4582 
+Formula: Tsat ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL | CV Error: 0.1013 
+Formula: Tsat ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL | CV Error: 0.407 
+Formula: Tsat ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c | CV Error: 1.2592 
+Formula: Tsat ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 | CV Error: 0.4966 
+Formula: Tsat ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine | CV Error: 0.4358 
+Formula: Tsat ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN | CV Error: 0.2829 
+Formula: Tsat ~ ph + SBP + DBP + Hb + WBC + Platelet | CV Error: 1.177 
+Formula: Tsat ~ ph + SBP + DBP + Hb + WBC | CV Error: 0.0475 
+Formula: Tsat ~ ph + SBP + DBP + Hb | CV Error: 0.0268 
+Formula: Tsat ~ ph + SBP + DBP | CV Error: 0.0258 
+Formula: Tsat ~ ph + SBP | CV Error: 0.0265 
+Formula: Tsat ~ ph | CV Error: 0.0245 
+Formula: Ferritin ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG + Tsat | CV Error: 1125126 
+Formula: Ferritin ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL + TG | CV Error: 2653467 
+Formula: Ferritin ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL + HDL | CV Error: 1008065 
+Formula: Ferritin ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c + LDL | CV Error: 444638 
+Formula: Ferritin ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 + HbA1c | CV Error: 420179.8 
+Formula: Ferritin ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine + HCO3 | CV Error: 1020046 
+Formula: Ferritin ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN + Creatinine | CV Error: 635714.4 
+Formula: Ferritin ~ ph + SBP + DBP + Hb + WBC + Platelet + BUN | CV Error: 326282.6 
+Formula: Ferritin ~ ph + SBP + DBP + Hb + WBC + Platelet | CV Error: 2774027 
+Formula: Ferritin ~ ph + SBP + DBP + Hb + WBC | CV Error: 300233.7 
+Formula: Ferritin ~ ph + SBP + DBP + Hb | CV Error: 230631.4 
+Formula: Ferritin ~ ph + SBP + DBP | CV Error: 223730.5 
+Formula: Ferritin ~ ph + SBP | CV Error: 228206.9 
+Formula: Ferritin ~ ph | CV Error: 227424.2 
