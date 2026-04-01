@@ -10,8 +10,9 @@ recursive_cv_assessment <- function(data, response, predictors) {
   cv_res <- cv.glm(data, model, K = 10)
   cv_error <- cv_res$delta[1]
   cv_K <- cv_res$K
-  
-  cat(formula_str, ",", round(cv_error, 4), ",", cv_K,"\n", file="/Users/Guest/Desktop/Github/ML/summary/2/out.file",append=TRUE)
+
+  cat(formula_str, ",", round(cv_error, 4), ",", cv_K, file="/Users/Guest/Desktop/Github/ML/summary/2/out.file",append=TRUE)
+  #cat(formula_str, ",", round(cv_error, 4), ",", cv_K,"\n", file="/Users/Guest/Desktop/Github/ML/summary/2/out.file",append=TRUE)
   
 
 
@@ -23,6 +24,7 @@ recursive_cv_assessment <- function(data, response, predictors) {
   # 4. Recursive Step: Remove one predictor and recurse
   for (i in 1:length(predictors)) {
     new_predictors <- predictors[-i]
+    cat(i,"\n", file="/Users/Guest/Desktop/Github/ML/summary/2/out.file",append=TRUE)
     # For demonstration, only recurse by dropping the last added, 
     # otherwise, this becomes combinatorial.
   }
@@ -40,10 +42,10 @@ recursive_cv_assessment <- function(data, response, predictors) {
 #recursive_cv_assessment(mtcars, "mpg", vars)
 ###########################
 
-#table=read.csv('/Users/guest/Desktop/Github/ML/data/kolachalama_data.csv',head=TRUE)
-#attach(table)
+table=read.csv('/Users/guest/Desktop/Github/ML/data/kolachalama_data.csv',head=TRUE)
+attach(table)
 
-#vars=c("ph","SBP","DBP","Hb","WBC","Platelet","BUN","Creatinine","HCO3","HbA1c","LDL","HDL","TG","Tsat","Ferritin")
+vars=c("ph","SBP","DBP","Hb","WBC","Platelet","BUN","Creatinine","HCO3","HbA1c","LDL","HDL","TG","Tsat","Ferritin")
 
 # No 2 loops
 for (i in 1:length(vars)){
@@ -53,15 +55,15 @@ recursive_cv_assessment(table,vars[i],vars[-i])
 
 #list of combinations
 # Example list/vector
-my_list <- c("A", "B", "C", "D")
+#my_list <- c("A", "B", "C", "D")
 
 # Generate combinations of 2
-pairs <- combn(my_list, 2)
+#pairs <- combn(my_list, 2)
 
 # Display result
-print(pairs)
+#print(pairs)
 # To see as a list of pairs:
-pair_list <- combn(my_list, 2, simplify = FALSE)
+#pair_list <- combn(my_list, 2, simplify = FALSE)
 
 
 
