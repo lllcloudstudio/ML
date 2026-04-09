@@ -130,3 +130,24 @@ recursive_kmeans_assessment(table,6,50,vars)
 ### 4/8/2026
 recursive_kmeans_assessment(table,6,50,vars)
 recursive_kmeans_assessment(table,6,20,vars)
+
+########################################################################################################
+items <- c("A", "B", "C", "D")
+n <- length(items)
+# Generate combinations from pair (2) up to n
+all_combos <- lapply(2:n, function(m) combn(items, m, simplify = FALSE))
+# Flatten list to see all combinations
+all_combos <- unlist(all_combos, recursive = FALSE)
+> length(all_combos)
+[1] 11
+> all_combos[[11]] # list[[i]]
+[1] "A" "B" "C" "D"
+> paste(all_combos[[11]],collapse='+')
+#r base function application to paste items of a list
+sapply(all_combos,paste,collapse=",")
+
+
+
+table.subset=list(c("ph","SBP","DBP"),c("ph","SBP"),c("ph","DBP"))
+#table.subset.unlist <- unlist(table.subset, recursive = FALSE)
+kmeans.6=lapply(table.subset,function(k) kmeans(table[,k],6,20))
