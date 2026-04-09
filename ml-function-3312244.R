@@ -91,41 +91,23 @@ vars=c("ph","SBP","DBP","Hb","WBC","Platelet","BUN","Creatinine","HCO3","HbA1c",
 
 recursive_kmeans_assessment <- function(data, kval,start, predictors) {
   table=data[,predictors]
-  # 1. Define model formula
-  #formula_str <- paste(response, "~", paste(predictors, collapse = " + "))
-  #model_form <- as.formula(formula_str)
-  
-  # 2. Fit model and perform 10-fold CV
-  #model <- glm(model_form, data = data)
-  #cv_res <- cv.glm(data, model, K = 10)
-  #cv_error <- cv_res$delta[1]
-  #cv_K <- cv_res$K
+
   colnames.params <- paste("K=",kval,",nstart=",start,",",paste(colnames(table),collapse = " + "))
+  
   kmodel=kmeans(table,kval,start)
   kmodel.withinss=kmodel$withinss
   kmodel.tot.withinss=kmodel$tot.withinss
 
   cat(colnames.params,",",kval,",",start,",",length(colnames(table)),",",kmodel.withinss,",",kmodel.tot.withinss,"\n",  file="/Users/Guest/Desktop/Github/ML/summary/2/out_1.file",append=TRUE)
-     #formula_str,",",
 
-  #cat(formula_str, ",", round(cv_error, 4), ",", cv_K, file="/Users/Guest/Desktop/Github/ML/summary/2/out_1.file",append=TRUE)
-  
   # 3. Base case: if only one predictor left, stop
   if (length(predictors) == 1) {
     return(NULL)
   }
   
-  # 4. Recursive Step: Remove one predictor and recurse
-  #for (i in 1:length(predictors)) {
-    #new_predictors <- predictors[-i]
-    #cat(i,"\n", file="/Users/Guest/Desktop/Github/ML/summary/2/out_1.file",append=TRUE)
-    # For demonstration, only recurse by dropping the last added, 
-    # otherwise, this becomes combinatorial.
-  
-  # Simple recursion example: Drop the last predictor in the list
   recursive_kmeans_assessment(table, kval,start, predictors[-length(predictors)])
 }
-}
+
 #####
 recursive_kmeans_assessment(table,2,1,vars)
 recursive_kmeans_assessment(table,3,1,vars)
@@ -145,3 +127,6 @@ recursive_kmeans_assessment(table,4,50,vars)
 recursive_kmeans_assessment(table,5,50,vars)
 recursive_kmeans_assessment(table,6,50,vars)
 
+### 4/8/2026
+recursive_kmeans_assessment(table,6,50,vars)
+recursive_kmeans_assessment(table,6,20,vars)
