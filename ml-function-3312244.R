@@ -89,25 +89,7 @@ vars=c("ph","SBP","DBP","Hb","WBC","Platelet","BUN","Creatinine","HCO3","HbA1c",
 
 
 
-recursive_kmeans_assessment <- function(data, kval,start, predictors) {
-  table=data[,predictors]
-
-  colnames.params <- paste("K=",kval,",nstart=",start,",",paste(colnames(table),collapse = " + "))
-  
-  kmodel=kmeans(table,kval,start)
-  kmodel.withinss=kmodel$withinss
-  kmodel.tot.withinss=kmodel$tot.withinss
-
-  cat(colnames.params,",",kval,",",start,",",length(colnames(table)),",",kmodel.withinss,",",kmodel.tot.withinss,"\n",  file="/Users/Guest/Desktop/Github/ML/summary/2/out_1.file",append=TRUE)
-
-  # 3. Base case: if only one predictor left, stop
-  if (length(predictors) == 1) {
-    return(NULL)
-  }
-  
-  recursive_kmeans_assessment(table, kval,start, predictors[-length(predictors)])
-}
-
+3
 #####
 recursive_kmeans_assessment(table,2,1,vars)
 recursive_kmeans_assessment(table,3,1,vars)
@@ -146,12 +128,12 @@ all_combos <- unlist(all_combos, recursive = FALSE)
 #r base function application to paste items of a list
 sapply(all_combos,paste,collapse=",")
 
-
+table=table[,4:20] # not necessary
 items=colnames(table)
 n=length(items)
 all_combos=lapply(2:n, function(m) combn(items, m, simplify = FALSE))
-
 table.subset.unlist <- unlist(all_combos, recursive = FALSE)
+
 kmeans.6=lapply(table.subset.unlist,function(k) kmeans(table[,k],6,20))   
                 
 table.subset=list(c("ph","SBP","DBP"),c("ph","SBP"),c("ph","DBP"))
