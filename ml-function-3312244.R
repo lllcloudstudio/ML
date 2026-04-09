@@ -100,11 +100,12 @@ recursive_kmeans_assessment <- function(data, kval,start, predictors) {
   #cv_res <- cv.glm(data, model, K = 10)
   #cv_error <- cv_res$delta[1]
   #cv_K <- cv_res$K
+  colnames.params <- paste("K=",kval,",nstart=",start,",",paste(colnames(table),collapse = " + "))
   kmodel=kmeans(table,kval,start)
   kmodel.withinss=kmodel$withinss
   kmodel.tot.withinss=kmodel$tot.withinss
 
-  cat(kval,",",start,",",length(colnames(table)),",",kmodel.withinss,",",kmodel.tot.withinss,"\n",  file="/Users/Guest/Desktop/Github/ML/summary/2/out_1.file",append=TRUE)
+  cat(colnames.params,",",kval,",",start,",",length(colnames(table)),",",kmodel.withinss,",",kmodel.tot.withinss,"\n",  file="/Users/Guest/Desktop/Github/ML/summary/2/out_1.file",append=TRUE)
      #formula_str,",",
 
   #cat(formula_str, ",", round(cv_error, 4), ",", cv_K, file="/Users/Guest/Desktop/Github/ML/summary/2/out_1.file",append=TRUE)
