@@ -158,7 +158,8 @@ lengths(all_combos)
 lengths(table.subset.unlist)
 kmeans.6=lapply(table.subset.unlist,function(k) kmeans(table[,k],6,20))
 
-#kmeans.6=lapply(all_combos,function(k) recursive_kmeans_assessment(table,6,20,k))   
+#kmeans.6=lapply(all_combos,function(k) recursive_kmeans_assessment(table,6,20,k)) 
+
                 
 table.subset=list(c("ph","SBP","DBP"),c("ph","SBP"),c("ph","DBP"))
 kmeans.6=lapply(table.subset,function(k) kmeans(table[,k],6,20))   
@@ -184,6 +185,12 @@ model_list <- map(data_list, ~ lm(y ~ x, data = .x))
 # Example: Select models with R-squared > 0.1
 # 1. Extract R-squared from each model summary
 rsq_values <- map_dbl(model_list, ~ summary(.x)$r.squared)
+
+#> summary(model_list[[1]])$r.squared
+#[1] 0.008413069
+> summary(kmeans.6[[1]])$cluster
+Error in summary(kmeans.6[[1]])$cluster : 
+  $ operator is invalid for atomic vectors
 
 # 2. Filter models based on condition
 selected_models <- model_list[rsq_values > 0.1]
