@@ -1,5 +1,6 @@
 library(boot)
 table=read.csv('/Users/guest/Desktop/Github/ML/data/kolachalama_data.csv',head=TRUE)
+table=read.table("C:/Users/Prisma Lopez/Documents/Github/Machine-Learning/kolachalama_data.csv",sep=",",header=TRUE)
 attach(table)
 
 # Recursive function to drop variables and assess via CV
@@ -99,7 +100,7 @@ function(data, kval,start, predictors) {
   kmodel.withinss=kmodel$withinss
   kmodel.tot.withinss=kmodel$tot.withinss
 
-  cat(colnames.params,",",kval,",",start,",",length(colnames(table)),",",kmodel.withinss,",",kmodel.tot.withinss,"\n",  file="/Users/Guest/Desktop/Github/ML/summary/2/out_1.file",append=TRUE)
+  cat(colnames.params,",",kval,",",start,",",length(colnames(table)),",",kmodel.withinss,",",kmodel.tot.withinss,"\n",  file="C:\Users\Prisma Lopez\Documents\Github\Machine-Learning\out_1.file",append=TRUE)
 
   # 3. Base case: if only one predictor left, stop
   if (length(predictors) == 1) {
