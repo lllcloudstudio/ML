@@ -1,5 +1,6 @@
 library(boot)
-table=read.csv('/Users/guest/Desktop/Github/ML/data/kolachalama_data.csv',head=TRUE)
+library(purrr)
+#table=read.csv('/Users/guest/Desktop/Github/ML/data/kolachalama_data.csv',head=TRUE)
 table=read.table("C:/Users/Prisma Lopez/Documents/Github/Machine-Learning/kolachalama_data.csv",sep=",",header=TRUE)
 attach(table)
 
