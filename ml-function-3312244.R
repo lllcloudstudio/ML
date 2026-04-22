@@ -201,3 +201,16 @@ map(selected_models, ~ list(
   rsq = summary(.x)$r.squared
 ))
 
+###################################################################### Map()
+list1 <- list(c(1, 2), c(3, 4))
+list2 <- list(5, 6)
+# Appends 5 to the first list and 6 to the second list
+result <- Map(c, list1, list2)
+
+###################################################################### mean(sapply())
+# Example data: a list containing three sublists
+my_list <- list(list(val=10, id="A"), list(val=20, id="B"), list(val=30, id="C"))
+
+# Calculate the mean of the first item ('val') across all sublists
+mean(sapply(my_list, `[[`, 1)) 
+# Output: 20
