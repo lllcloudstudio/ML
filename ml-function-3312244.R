@@ -158,7 +158,9 @@ table.subset.unlist <- unlist(all_combos, recursive = FALSE)
 lengths(table.subset.unlist)
                   
 kmeans.6=lapply(table.subset.unlist,function(k) kmeans(table[,k],6,20))
+list_named=setNames(kmeans.6,paste0('LST',1:lengths(table.subset.unlist))
 
+all_cluster = lapply(list_named,function(x) x$cluster)
 
 ###################################################################### Map()
 list1 <- list(c(1, 2), c(3, 4))
