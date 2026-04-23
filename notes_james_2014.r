@@ -86,6 +86,7 @@ summary() #quartiles incl min or max of each variable
 cat()
 combn() #package:utils
 Map()
+paste0()
 ##### Stock market data
 
 > dim(Smarket)
