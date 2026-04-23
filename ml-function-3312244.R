@@ -154,50 +154,33 @@ items=colnames(table)
 n=length(items)
 all_combos=lapply(2:n, function(m) combn(items, m, simplify = FALSE))
 lengths(all_combos)
-#table.subset.unlist <- unlist(all_combos, recursive = FALSE)
+table.subset.unlist <- unlist(all_combos, recursive = FALSE)
 lengths(table.subset.unlist)
+                  
 kmeans.6=lapply(table.subset.unlist,function(k) kmeans(table[,k],6,20))
 
-#kmeans.6=lapply(all_combos,function(k) recursive_kmeans_assessment(table,6,20,k)) 
 
+
+
+list_named=setNames(kmeans.6,paste0('LST',1:length(table.subset.unlist)))
+all_centers = lapply(list_named,function(x) x$centers)
+sapply(all_centers,mean) # practice
+
+
+
+# Assuming 'nested_list' contains lists of data frames
+# To calculate the mean of 'col1' in every data frame:
+
+#result <- lapply(all_cluster, function(sublist) {                # Level 1
+  #lapply(sublist, function(df) colMeans(df, na.rm = FALSE))    # Level 2
+#})
                 
-table.subset=list(c("ph","SBP","DBP"),c("ph","SBP"),c("ph","DBP"))
-kmeans.6=lapply(table.subset,function(k) kmeans(table[,k],6,20))   
+#Map()
 
-#table.subset.unlist <- unlist(table.subset, recursive = FALSE)
+###################################################################### mean(sapply())
+# Example data: a list containing three sublists
+my_list <- list(list(val=10, id="A"), list(val=20, id="B"), list(val=30, id="C"))
 
-# Install purrr if not already installed
-# install.packages("purrr")
-
-library(purrr)
-
-# Example: Suppose we have a list of fitted models
-set.seed(123)
-data_list <- list(
-  df1 = data.frame(x = rnorm(20), y = rnorm(20)),
-  df2 = data.frame(x = rnorm(20), y = rnorm(20)),
-  df3 = data.frame(x = rnorm(20), y = rnorm(20))
-)
-
-# Fit a linear model to each dataset
-model_list <- map(data_list, ~ lm(y ~ x, data = .x))
-
-# Example: Select models with R-squared > 0.1
-# 1. Extract R-squared from each model summary
-rsq_values <- map_dbl(model_list, ~ summary(.x)$r.squared)
-
-#> summary(model_list[[1]])$r.squared
-#[1] 0.008413069
-> summary(kmeans.6[[1]])$cluster
-Error in summary(kmeans.6[[1]])$cluster : 
-  $ operator is invalid for atomic vectors
-
-# 2. Filter models based on condition
-selected_models <- model_list[rsq_values > 0.1]
-
-# Show selected models and their R-squared
-map(selected_models, ~ list(
-  formula = formula(.x),
-  rsq = summary(.x)$r.squared
-))
-
+# Calculate the mean of the first item ('val') across all sublists
+mean(sapply(my_list, `[[`, 1)) 
+# Output: 20
