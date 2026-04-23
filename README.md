@@ -4,12 +4,13 @@ A review of 2017 health data from Dr. Vijay Kolachalama. Data is either syntheti
 
 50 patient blood sample 
 13 diagnostic variables, as numerics and without annotations 
-Age, Gender, or Race variables are numerical
+3 variables are Age, Gender, or Race and are numerical
+The sample data is considered a small sample size < 300*
 
-Variables like ph, LDL, HDL, or hb diagnostics/health status, I consider an extrapolation to modelling (towards selection) .I consider multiple linear regression.
+Variables like ph, LDL, HDL, or hb diagnostics, I consider an extrapolation to modelling (towards selection) or indicator(s) of health status.
+The two group (Male of Female) health bias is delved with ML: k-means, svm, ...
 
-The two group (Male of Female) health bias is delved with k-means or hc...
-The sample data is considered a small sample size < 300*. 
+ 
 
 Review:
 1) Summary comparison of 2 models (glm() function). As response either `category` or `Gender`
@@ -24,8 +25,9 @@ Summary per component: Standard deviation, Proportion of Variance, or Cumulative
 multiplot line or bar graph of vectors
 
 4) kmeans evaluatin at k=6, and 1 additional parameter ...
+See bias variance .xlsx
 
-5) model evaluation: training and test set selection (10-40 ; 15-35)
+6) model evaluation: training and test set selection (10-40 ; 15-35)...
    LOOCV* or k-fold cross validation* 
 
 
