@@ -85,6 +85,7 @@ pairs() # 2 variable plots of data
 summary() #quartiles incl min or max of each variable
 cat()
 combn() #package:utils
+Map()
 ##### Stock market data
 
 > dim(Smarket)
