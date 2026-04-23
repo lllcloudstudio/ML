@@ -158,15 +158,24 @@ table.subset.unlist <- unlist(all_combos, recursive = FALSE)
 lengths(table.subset.unlist)
                   
 kmeans.6=lapply(table.subset.unlist,function(k) kmeans(table[,k],6,20))
-list_named=setNames(kmeans.6,paste0('LST',1:length(table.subset.unlist))
 
-all_cluster = lapply(list_named,function(x) x$centers)
 
-###################################################################### Map()
-list1 <- list(c(1, 2), c(3, 4))
-list2 <- list(5, 6)
-# Appends 5 to the first list and 6 to the second list
-result <- Map(c, list1, list2)
+
+
+list_named=setNames(kmeans.6,paste0('LST',1:length(table.subset.unlist)))
+all_centers = lapply(list_named,function(x) x$centers)
+sapply(all_centers,mean) # practice
+
+
+
+# Assuming 'nested_list' contains lists of data frames
+# To calculate the mean of 'col1' in every data frame:
+
+#result <- lapply(all_cluster, function(sublist) {                # Level 1
+  #lapply(sublist, function(df) colMeans(df, na.rm = FALSE))    # Level 2
+#})
+                
+#Map()
 
 ###################################################################### mean(sapply())
 # Example data: a list containing three sublists
