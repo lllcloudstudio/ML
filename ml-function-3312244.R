@@ -171,7 +171,7 @@ sapply(all_centers,mean) # practice
 
 table=read.table('/home/zznailmail/data/kolachalama_data',sep=',',header=TRUE)
 attach(table)
-Category <- sample(c("Category-01", "Category-021"), 50, replace = TRUE) # random vector not attached to table
+Category <- sample(c(0, 1), 50, replace = TRUE) # random vector not attached to table, factor issue
 table[["Category"]] <- Category # add category with random labels
 table=table[,4:21]
 
