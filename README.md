@@ -9,7 +9,7 @@ The sample data is considered a small sample size < 300*
 
 Variables like ph, LDL, HDL, or hb diagnostics, I consider an extrapolation to modelling (towards selection) or indicator(s) of health status.
 
-The two group (Male of Female) health bias is delved with ML: k-means, svm, hc...to: model selection (by features or variables) to dimension reduction
+The two group (Male of Female) health bias is delved with ML: k-means, svm, hc...to: model selection dimension reduction by features or variables) to.
 
 
 Review:
