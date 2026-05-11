@@ -9,8 +9,7 @@ The sample data is considered a small sample size < 300*
 
 Variables like ph, LDL, HDL, or hb diagnostics, I consider an extrapolation to modelling (towards selection) or indicator(s) of health status.
 
-The two group (Male of Female) health bias is delved with ML: k-means, svm, hc...to:
-A) model selection 
+The two group (Male of Female) health bias is delved with ML: k-means, svm, hc...to: model selection (by features or variables) to dimension reduction
 
 
 Review:
@@ -25,13 +24,13 @@ the principal component loading vectors have length p=16`
 Summary per component: Standard deviation, Proportion of Variance, or Cumulative Proportion
 multiplot line or bar graph of vectors
 
-4) kmeans evaluatin at k=6, and 1 additional parameter ...
+4) kmeans evaluation at k=6, and 1 additional parameter ...
 See bias variance .xlsx
 
 6) model evaluation: training and test set selection (10-40 ; 15-35)...
    LOOCV* or k-fold cross validation* 
 
-Inspection of data by category is a preliminary procedure to model(s) production and evaluation 
+Inspection of data by category is a preliminary procedure to model(s) production (reducing the number of models), evaluation, or selection.
 
 
 #Small Datasets: If you have very few instances (e.g., < 300), 20% may be too small to reliably test on. In this scenario, k-fold cross-validation is preferred.
