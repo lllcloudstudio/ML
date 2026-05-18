@@ -169,17 +169,14 @@ sapply(all_centers,mean) # practice
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-table=read.table('/home/zznailmail/data/kolachalama_data',sep=',',header=TRUE)
+table=read.table('/Users/guest/Desktop/Github/ML/script/kolachalama_data.r',sep=',',header=TRUE)
 attach(table)
 Category <- sample(c(0, 1), 50, replace = TRUE) # random vector not attached to table, factor issue
 table[["Category"]] <- Category # add category with random labels
 table=table[,4:21]
 
-## classification mode
-# default with factor response:
-model <- svm(Category ~ ., data = table)
+#model <- svm(Category ~ ., data = table)
 
-# alternatively the traditional interface:
 x <- subset(table, select = -Category)
 y <- Category
 model <- svm(x, y) 
@@ -187,9 +184,7 @@ model <- svm(x, y)
 print(model)
 summary(model)
 
-# test with train data
-pred <- predict(model, x)
-# (same as:)
+pred <- predict(model, x)# (same as:)
 pred <- fitted(model)
 
 # Check accuracy:
