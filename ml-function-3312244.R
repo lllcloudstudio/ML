@@ -174,37 +174,36 @@ attach(table)
 Category <- sample(c(0, 1), 50, replace = TRUE) # random vector not attached to table, factor issue
 table[["Category"]] <- Category # add category with random labels
 table=table[,4:21]
+table=table[,c("LDL","HDL","ph","Hb","Category")] #ph hb ldl hdl
+                     
+model <- svm(Category ~ ., data = table) # gamma?, gamma=0.1 #alt. m <- svm(table, gamma = 0.1) # scale = FALSE, kernel = "linear" X = table^
+model <- svm(
 
-#model <- svm(Category ~ ., data = table)
 
-x <- subset(table, select = -Category)
+
+  
+plot(model,table)
+#?
+X <- subset(table, select = -Category)
 y <- Category
-model <- svm(x, y) 
-
+model <- svm(X, y) 
+plot(model,X)
 print(model)
 summary(model)
-
-pred <- predict(model, x)# (same as:)
-pred <- fitted(model)
-
-# Check accuracy:
-table(pred, y)
+pred <- predict(model, x)# (same as:), pred <- fitted(model)
+table(pred, y) # Check accuracy:
 
 
 
 # Assuming 'nested_list' contains lists of data frames
 # To calculate the mean of 'col1' in every data frame:
-
 #result <- lapply(all_cluster, function(sublist) {                # Level 1
   #lapply(sublist, function(df) colMeans(df, na.rm = FALSE))    # Level 2
-#})
-                
+#})            
 #Map()
-
 ###################################################################### mean(sapply())
 # Example data: a list containing three sublists
-my_list <- list(list(val=10, id="A"), list(val=20, id="B"), list(val=30, id="C"))
-
+#my_list <- list(list(val=10, id="A"), list(val=20, id="B"), list(val=30, id="C"))
 # Calculate the mean of the first item ('val') across all sublists
-mean(sapply(my_list, `[[`, 1)) 
+#mean(sapply(my_list, `[[`, 1)) 
 # Output: 20
