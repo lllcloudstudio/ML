@@ -174,15 +174,13 @@ attach(table)
 Category <- sample(c(0, 1), 50, replace = TRUE) # random vector not attached to table, factor issue
 table[["Category"]] <- Category # add category with random labels
 table=table[,4:21]
-table=table[,c("LDL","HDL","ph","Hb","Category")] #ph hb ldl hdl
-                     
-model <- svm(Category ~ ., data = table) # gamma?, gamma=0.1 #alt. m <- svm(table, gamma = 0.1) # scale = FALSE, kernel = "linear" X = table^
-model <- svm(
+table.cat=table[,c("LDL","HDL","ph","Hb","Category")] #ph hb ldl hdl                     
+model <- svm(Category ~ ., data = table.cat) # alt. m <- svm(table, gamma = 0.1) # scale = FALSE, kernel = "linear" X = table^
+model <- svm(Category ~ ., data = table.cat,gamma=0.1)
 
 
 
   
-plot(model,table)
 #?
 X <- subset(table, select = -Category)
 y <- Category
@@ -190,7 +188,7 @@ model <- svm(X, y)
 plot(model,X)
 print(model)
 summary(model)
-pred <- predict(model, x)# (same as:), pred <- fitted(model)
+pred <- predict(model, X)# (same as:), pred <- fitted(model)
 table(pred, y) # Check accuracy:
 
 
