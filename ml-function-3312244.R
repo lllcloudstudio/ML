@@ -169,7 +169,7 @@ sapply(all_centers,mean) # practice
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-table=read.table('/Users/guest/Desktop/Github/ML/kolachalama_data.r',sep=',',header=TRUE)
+table=read.table('/Users/guest/Desktop/Github/ML/kolachalama_data.csv',sep=',',header=TRUE)
 attach(table)
 Category <- sample(c(0, 1), 50, replace = TRUE) # random vector not attached to table, factor issue
 table[["Category"]] <- Category # add category with random labels
