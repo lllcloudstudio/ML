@@ -203,7 +203,7 @@ cat(capture.output(pred_table), file="/Users/guest/Desktop/Github/ML/summary/3/o
 # Stop redirection and close the file
 #sink()
 # OR OK
-pred_table <- table(pred,y)  # r base table() to variable and as.data.frame() to file No cat()
-write.csv(as.data.frame(pred_table), "/Users/guest/Desktop/Github/ML/summary/3/out_2.file", row.names = FALSE)
+pred_table <- table(pred,y)  # r base table() to variable and as.data.frame() to file with write.csv() No cat()
+write.table(as.data.frame(pred_table), "/Users/guest/Desktop/Github/ML/summary/3/out_2.file", row.names = FALSE,col.names=FALSE,append=TRUE,sep=',') # string quotes, add save column names  
 
 
