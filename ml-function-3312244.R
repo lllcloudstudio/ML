@@ -195,11 +195,15 @@ pred <- predict(model, X)# (same as:), pred <- fitted(model)
 pred_table=table(pred, y) #
 # saving prediction output as table, file saving with capture.output
 cat(capture.output(pred_table), file="/Users/guest/Desktop/Github/ML/summary/3/out_2.file",sep = "\n", append=TRUE)
-# or
+# NOT OR
 # Start redirecting console output to a file
-sink("/Users/guest/Desktop/Github/ML/summary/3/out_2.file")
+#sink("/Users/guest/Desktop/Github/ML/summary/3/out_2.file")
 # Print the table (this goes to the file instead of the console)
-table(pred,y)
+#table(pred,y)
 # Stop redirection and close the file
-sink()
+#sink()
+# OR OK
+pred_table <- table(pred,y)  # r base table() to variable and as.data.frame() to file No cat()
+write.csv(as.data.frame(pred_table), "/Users/guest/Desktop/Github/ML/summary/3/out_2.file", row.names = FALSE)
+
 
