@@ -207,3 +207,4 @@ pred_table <- table(pred,y)  # r base table() to variable and as.data.frame() to
 write.table(as.data.frame(pred_table), "/Users/guest/Desktop/Github/ML/summary/3/out_2.file", row.names = FALSE,col.names=FALSE,append=TRUE,sep=',') # string quotes, add save column names  
 
 
+
