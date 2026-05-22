@@ -177,7 +177,8 @@ table=table[,4:21]
 table.cat=table[,c("LDL","HDL","Category")] #"ph","Hb",                    
 model <- svm(Category ~ ., data = table.cat) # alt. m <- svm(table, gamma = 0.1) # scale = FALSE, kernel = "linear" cost=0.1
 model <- svm(Category ~ ., data = table.cat,gamma=0.1)
-# 10 fold cross validation with tune pg 361 
+# coef() of model
+# 10 fold cross validation with tune() pg 361 
 # train svm
 # ROC plot on fitted values with rocplot()
 
