@@ -173,17 +173,17 @@ table=read.table('/Users/guest/Desktop/Github/ML/kolachalama_data.csv',sep=',',h
 attach(table)
 Category <- sample(c(0, 1), 50, replace = TRUE) # random vector not attached to table, factor issue
 table[["Category"]] <- Category # add category with random labels
+
 #table=table[,4:21]
-table.cat=table[,c("LDL","HDL","Category")] #"ph","Hb",                    
-model <- svm(Category ~ ., data = table.cat) # alt. m <- svm(table, gamma = 0.1) # scale = FALSE, kernel = "linear" cost=0.1
-model <- svm(Category ~ ., data = table.cat,gamma=0.1)
+#"LDL","HDL","Category" "ph","Hb",                    
+# alt. m <- svm(table, gamma = 0.1) # scale = FALSE, kernel = "linear" cost=0.1
+
 # coef() of model linear
 # 10 fold cross validation with tune() pg 361 
 # train svm
 # ROC plot on fitted values with rocplot()
 
 
-  
 #?
 X <- subset(table, select = -Category)
 y <- Category
@@ -192,19 +192,14 @@ plot(model,X)
 print(model)
 summary(model)
 pred <- predict(model, X)# (same as:), pred <- fitted(model)
-table(pred, y) # Check accuracy:
+pred_table=table(pred, y) #
+# saving prediction output as table, file saving with capture.output
+cat(capture.output(pred_table), file="/Users/guest/Desktop/Github/ML/summary/3/out_2.file",sep = "\n", append=TRUE)
+# or
+# Start redirecting console output to a file
+sink("/Users/guest/Desktop/Github/ML/summary/3/out_2.file")
+# Print the table (this goes to the file instead of the console)
+table(pred,y)
+# Stop redirection and close the file
+sink()
 
-
-
-# Assuming 'nested_list' contains lists of data frames
-# To calculate the mean of 'col1' in every data frame:
-#result <- lapply(all_cluster, function(sublist) {                # Level 1
-  #lapply(sublist, function(df) colMeans(df, na.rm = FALSE))    # Level 2
-#})            
-#Map()
-###################################################################### mean(sapply())
-# Example data: a list containing three sublists
-#my_list <- list(list(val=10, id="A"), list(val=20, id="B"), list(val=30, id="C"))
-# Calculate the mean of the first item ('val') across all sublists
-#mean(sapply(my_list, `[[`, 1)) 
-# Output: 20
